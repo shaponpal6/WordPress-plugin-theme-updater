@@ -1,0 +1,16 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+<Directory />
+    AllowOverride All
+    Allow from all
+    Require all granted
+</Directory>
+
+#<Directory "C:/GitHub/head_count/">
+#    AllowOverride All
+#    Allow from all
+#    Require local
+#</Directory>
